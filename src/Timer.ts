@@ -164,7 +164,7 @@ export default class Timer implements Readable<TimerStore> {
         let autostart = false
         this.update((state) => {
             this.notify(state)
-            if (!s.continueAfterZero) {
+            if (!state.continueAfterZero) {
               const ctx = this.createLogContext(state)
               this.processLog(ctx)
               autostart = state.autostart
